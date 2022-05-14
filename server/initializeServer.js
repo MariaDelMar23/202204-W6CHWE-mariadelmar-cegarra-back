@@ -6,7 +6,7 @@ const { app } = require(".");
 const initializeServer = async (port) =>
   new Promise((resolve, reject) => {
     const server = app.listen(port, () => {
-      debug(chalk.yellow(`Server listening on port ${port}`));
+      debug(chalk.magenta(`Server listening on port ${port}`));
       resolve();
     });
 
