@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage --watchAll",
     "pokemon": "nodemon . -q",
     "prepare": "husky install"
   },
@@ -35,5 +35,11 @@
     "express": "^4.18.1",
     "husky": "^8.0.1",
     "morgan": "^1.10.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!.eslitncr.js",
+      "./**/*.js"
+    ]
   }
 }
