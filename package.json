@@ -1,0 +1,37 @@
+{
+  "name": "202204-w6chwe-mariadelmar-cegarra-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariaDelMar23/202204-W6CHWE-mariadelmar-cegarra-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariaDelMar23/202204-W6CHWE-mariadelmar-cegarra-back/issues"
+  },
+  "homepage": "https://github.com/MariaDelMar23/202204-W6CHWE-mariadelmar-cegarra-back#readme",
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "debug": "^4.3.4",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "express": "^4.18.1",
+    "jest": "^28.1.0",
+    "mongoose": "^6.3.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
+    "husky": "^7.0.0"
+  },
+  "dependencies": {
+    "husky": "^8.0.1"
+  }
+}
