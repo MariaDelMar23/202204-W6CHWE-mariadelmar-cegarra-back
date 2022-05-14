@@ -1,24 +1,27 @@
-const { Schema, model } = require("mongoose");
+require("mongoose-type-url");
+const { model, mongoose } = require("mongoose");
 
-const RobotSchema = new Schema({
+const RobotSchema = new mongoose.Schema({
   name: {
     type: String,
   },
   img: {
-    type: URL,
+    type: mongoose.SchemaTypes.Url,
   },
-  speed: {
-    type: Number,
-    min: [0, "Please enter a number between 0-10"],
-    max: [10, "Please enter a number between 0-10"],
-  },
-  strength: {
-    type: Number,
-    min: [0, "Please enter a number between 0-10"],
-    max: [10, "Please enter a number between 0-10"],
-  },
-  dateOfCreation: {
-    type: Date,
+  features: {
+    speed: {
+      type: Number,
+      min: [0, "Please enter a number between 0-10"],
+      max: [10, "Please enter a number between 0-10"],
+    },
+    strength: {
+      type: Number,
+      min: [0, "Please enter a number between 0-10"],
+      max: [10, "Please enter a number between 0-10"],
+    },
+    dateOfCreation: {
+      type: Date,
+    },
   },
 });
 
