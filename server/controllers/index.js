@@ -4,7 +4,7 @@ const chalk = require("chalk");
 const Robot = require("../../db/models/Robot");
 
 const getRobots = async (req, res) => {
-  debug(chalk.blueBright("Request to get robots"));
+  debug(chalk.blue("Request to get robots"));
   const robots = await Robot.find();
   res.status(200).json({ robots });
 };
@@ -16,7 +16,15 @@ const deleteRobot = async (req, res) => {
   res.status(200).json({ msg: `Deleted robot with Id ${idRobot}` });
 };
 
+const createRobot = async (req, res) => {
+  debug(chalk.blueBright("Request to create a robot"));
+  const robot = req.body;
+  const newRobot = await Robot.create(robot);
+  res.status(201).json(newRobot);
+};
+
 module.exports = {
   getRobots,
   deleteRobot,
+  createRobot,
 };
