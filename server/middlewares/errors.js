@@ -1,5 +1,6 @@
 const chalk = require("chalk");
 
+require("dotenv").config();
 const debug = require("debug")("robots:server:errors");
 
 const notFoundError = (req, res) => {
