@@ -9,6 +9,13 @@ const getRobots = async (req, res) => {
   res.status(200).json({ robots });
 };
 
+const getRobotById = async (req, res) => {
+  const { idRobot } = req.params;
+  debug(chalk.blue(`Request to get the robot with id: `));
+  const robot = await Robot.findById(idRobot);
+  res.status(200).json(robot);
+};
+
 const deleteRobot = async (req, res) => {
   debug(chalk.blueBright("Request to delete a robot"));
   const { idRobot } = req.params;
@@ -27,4 +34,5 @@ module.exports = {
   getRobots,
   deleteRobot,
   createRobot,
+  getRobotById,
 };
