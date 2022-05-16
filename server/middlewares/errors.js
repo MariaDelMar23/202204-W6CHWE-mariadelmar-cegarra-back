@@ -10,7 +10,11 @@ const notFoundError = (req, res) => {
 
 const generalError = (error, req, res) => {
   debug(chalk.red(`${error.message}`));
-  res.status(500).json({ msg: "General error" });
+  const statusCode = error.statusCode ?? 500;
+  const errorMessage = error.statusCode
+    ? error.message
+    : { msg: "General error" };
+  res.status(statusCode).json({ msg: errorMessage });
 };
 
 module.exports = { notFoundError, generalError };
