@@ -25,16 +25,6 @@ describe("Given the notFoundError", () => {
 
       expect(res.json).toHaveBeenCalledWith(expectedJSON);
     });
-
-    // test("Then it should call the function debug with a function red with 'GET on /robotis not found'", () => {
-    //   const expectedErrorMessage = "GET on /robotis not found";
-
-    //   notFoundError(req, res);
-
-    //   expect(mockDebug)
-    //     .toHaveBeenCalledWith(mockChalk.red)
-    //     .toHaveBeenCalledWith(expectedErrorMessage);
-    // });
   });
 });
 
