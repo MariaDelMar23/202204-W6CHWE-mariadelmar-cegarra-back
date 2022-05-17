@@ -1,21 +1,5 @@
 const { notFoundError, generalError } = require("./errors");
 
-// const mockDebug = jest.fn();
-// jest.mock("debug", () => ({
-//   ...jest.requireActual("debug"),
-//   debug: jest
-//     .fn()
-//     .mockReturnValue(mockDebug)
-//     .mockReturnValue(() => {}),
-// }));
-
-// const mockRed = jest.fn();
-// const mockChalk = jest.fn().mockReturnValue({ red: mockRed });
-// jest.mock("chalk", () => ({
-//   ...jest.requireActual("chalk"),
-//   chalk: () => mockChalk,
-// }));
-
 describe("Given the notFoundError", () => {
   describe("When it receives a response object", () => {
     const res = {
@@ -41,16 +25,6 @@ describe("Given the notFoundError", () => {
 
       expect(res.json).toHaveBeenCalledWith(expectedJSON);
     });
-
-    // test("Then it should call the function debug with a function red with 'GET on /robotis not found'", () => {
-    //   const expectedErrorMessage = "GET on /robotis not found";
-
-    //   notFoundError(req, res);
-
-    //   expect(mockDebug)
-    //     .toHaveBeenCalledWith(mockChalk.red)
-    //     .toHaveBeenCalledWith(expectedErrorMessage);
-    // });
   });
 });
 
