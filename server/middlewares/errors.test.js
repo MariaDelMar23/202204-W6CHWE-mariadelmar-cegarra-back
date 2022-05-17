@@ -1,21 +1,5 @@
 const { notFoundError, generalError } = require("./errors");
 
-// const mockDebug = jest.fn();
-// jest.mock("debug", () => ({
-//   ...jest.requireActual("debug"),
-//   debug: jest
-//     .fn()
-//     .mockReturnValue(mockDebug)
-//     .mockReturnValue(() => {}),
-// }));
-
-// const mockRed = jest.fn();
-// const mockChalk = jest.fn().mockReturnValue({ red: mockRed });
-// jest.mock("chalk", () => ({
-//   ...jest.requireActual("chalk"),
-//   chalk: () => mockChalk,
-// }));
-
 describe("Given the notFoundError", () => {
   describe("When it receives a response object", () => {
     const res = {
